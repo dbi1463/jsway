@@ -13,6 +13,6 @@
 	</properties>
 	<modules>
 		<module>core</module>
-		<module>jsway-example</module>
+		<module>example</module>
 	</modules>
 </project>

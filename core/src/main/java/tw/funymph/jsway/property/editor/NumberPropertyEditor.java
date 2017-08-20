@@ -43,7 +43,7 @@ public class NumberPropertyEditor<T extends Comparable<T>> extends JPanel implem
 	private static final long serialVersionUID = 7931415521443179682L;
 
 	private JSpinner valueEditor;
-	private JComboBox unitSelector;
+	private JComboBox<String> unitSelector;
 	private NumberProperty<T> numberProperty;
 
 	/**

@@ -25,7 +25,7 @@ import tw.funymph.jsway.property.NumberProperty;
  * @version 1.2
  * @since 1.0
  */
-class UnitSelectionModel<T extends Comparable<T>> implements ComboBoxModel {
+class UnitSelectionModel<T extends Comparable<T>> implements ComboBoxModel<String> {
 
 	private NumberProperty<T> wrappedProperty;
 	private LinkedList<ListDataListener> listeners;
@@ -47,7 +47,7 @@ class UnitSelectionModel<T extends Comparable<T>> implements ComboBoxModel {
 	}
 
 	@Override
-	public Object getElementAt(int index) {
+	public String getElementAt(int index) {
 		return wrappedProperty.getAvailableUnits().get(index);
 	}
 

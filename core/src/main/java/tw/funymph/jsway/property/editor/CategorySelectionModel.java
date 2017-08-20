@@ -40,7 +40,7 @@ import tw.funymph.jsway.utils.ObjectUtilities;
  * @version 1.2
  * @since 1.1
  */
-class CategorySelectionModel extends DefaultListSelectionModel implements ComboBoxModel, MultiLanguageSupportListener, CategorizedEditablePropertiesListener {
+class CategorySelectionModel extends DefaultListSelectionModel implements ComboBoxModel<Choice>, MultiLanguageSupportListener, CategorizedEditablePropertiesListener {
 
 	private static final long serialVersionUID = -145050539687584779L;
 
@@ -151,7 +151,7 @@ class CategorySelectionModel extends DefaultListSelectionModel implements ComboB
 	}
 
 	@Override
-	public Object getElementAt(int index) {
+	public Choice getElementAt(int index) {
 		return choices.get(index);
 	}
 

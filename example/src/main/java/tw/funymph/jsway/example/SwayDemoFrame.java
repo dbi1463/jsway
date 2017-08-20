@@ -108,6 +108,7 @@ public class SwayDemoFrame extends JFrame implements ActionListener {
 		colors.addColor(0.25, new ColorProperty("Usage < 0.25", Color.green));
 	}
 
+	@SuppressWarnings("serial")
 	private void createToolBar() {
 		toolbar = new StyledToolBar();
 		toolbar.setBackgroundImage("icons/ToolBarBg.png");
@@ -206,13 +207,13 @@ public class SwayDemoFrame extends JFrame implements ActionListener {
 
 	private void createAdvancedProperties() {
 		advancedProperties = new DefaultEditableProperties("Advanced Properties");
-		NumberProperty margin = new NumberProperty("Margin", 2.54, 0.1, "cm");
+		NumberProperty<Double> margin = new NumberProperty<Double>("Margin", 2.54, 0.1, "cm");
 		margin.addAvailableUnit("inch");
 		margin.setUIEditable(false);
 		advancedProperties.addEditableProperty(margin);
 		advancedProperties.addEditableProperty(new IPv4AddressProperty("eth 0 IP Address", "192.168.0.1"));
 		advancedProperties.addEditableProperty(new MACAddressProperty("eth 0 MAC Address", "AB:CD:EF:00:11:22:33", ":"));
-		choices = new Vector();
+		choices = new Vector<Choice>();
 		choices.add(new MyChoice(1));
 		choices.add(new MyChoice(2));
 		choices.add(new MyChoice(3));
@@ -226,7 +227,7 @@ public class SwayDemoFrame extends JFrame implements ActionListener {
 		basicProperties.addEditableProperty(new BooleanProperty("Boolean property", false));
 		basicProperties.addEditableProperty(new TextProperty("Text property", "This is a text property."));
 		basicProperties.addEditableProperty(monitor.getRecycleBoundaryProperty());
-		basicProperties.addEditableProperty(new NumberProperty("Distance", 100, 1, "m"));
+		basicProperties.addEditableProperty(new NumberProperty<Double>("Distance", 100, 1, "m"));
 		basicProperties.addEditableProperty(new DateProperty("Date"));
 	}
 

@@ -35,7 +35,7 @@ import tw.funymph.jsway.utils.ObjectUtilities;
  * @version 1.2
  * @since 1.1
  */
-class ChoiceSelectionModel implements SelfDetachable, ComboBoxModel, EditablePropertyListener {
+class ChoiceSelectionModel implements SelfDetachable, ComboBoxModel<Choice>, EditablePropertyListener {
 
 	private ChoicesProperty choicesProperty;
 	private List<ListDataListener> listeners;
@@ -79,7 +79,7 @@ class ChoiceSelectionModel implements SelfDetachable, ComboBoxModel, EditablePro
 	}
 
 	@Override
-	public Object getElementAt(int index) {
+	public Choice getElementAt(int index) {
 		if(index < choicesProperty.getChoices().size()) {
 			return choicesProperty.getChoices().get(index);
 		}

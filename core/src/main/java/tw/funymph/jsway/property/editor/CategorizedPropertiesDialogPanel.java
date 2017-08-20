@@ -47,7 +47,7 @@ public class CategorizedPropertiesDialogPanel extends JPanel implements SelfDeta
 	private static final String ILLEGAL_SIZE_ARGUMENTS_EXCEPTION = "The size of the two arguments are not matched!";
 
 	private JPanel selectorPanel;
-	private JList categorySelector;
+	private JList<Choice> categorySelector;
 	private PropertiesDialogPanel propertiesPanel;
 
 	private CategorySelectionModel selectionModel;
@@ -80,7 +80,7 @@ public class CategorizedPropertiesDialogPanel extends JPanel implements SelfDeta
 		selectorPanel = new JPanel();
 		propertiesPanel = new PropertiesDialogPanel();
 		selectionModel = new CategorySelectionModel();
-		categorySelector = new JList(selectionModel);
+		categorySelector = new JList<Choice>(selectionModel);
 		categorySelector.setSelectionModel(selectionModel);
 		categorySelector.setBorder(BorderFactory.createEtchedBorder());
 		setLayout(new BorderLayout());

@@ -22,6 +22,7 @@ import javax.swing.event.ListDataListener;
 
 import tw.funymph.jsway.SelfDetachable;
 import tw.funymph.jsway.property.CategorizedEditableProperties;
+import tw.funymph.jsway.property.Choice;
 
 /**
  * A GUI panel that displays the aligned editors for a suite of categorized editable properties.
@@ -36,7 +37,7 @@ public class CategorizedPropertiesEditPanel extends JPanel implements SelfDetach
 
 	private static final String NULL_CATEGORY_EXCEPTION = "Cannot set a null category";
 
-	private JComboBox categorySelector;
+	private JComboBox<Choice> categorySelector;
 	private PropertiesEditPanel propertiesEeditPanel;
 
 	private CategorySelectionModel selectionModel;
@@ -57,7 +58,7 @@ public class CategorizedPropertiesEditPanel extends JPanel implements SelfDetach
 	public CategorizedPropertiesEditPanel(CategorizedEditableProperties properties) {
 		propertiesEeditPanel = new PropertiesEditPanel();
 		selectionModel = new CategorySelectionModel();
-		categorySelector = new JComboBox(selectionModel);
+		categorySelector = new JComboBox<Choice>(selectionModel);
 		setLayout(new BorderLayout());
 		add(categorySelector, BorderLayout.NORTH);
 		add(propertiesEeditPanel, BorderLayout.CENTER);

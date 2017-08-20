@@ -16,6 +16,7 @@ import static tw.funymph.jsway.utils.ObjectUtilities.requireNonNull;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
 
+import tw.funymph.jsway.property.Choice;
 import tw.funymph.jsway.property.ChoicesProperty;
 import tw.funymph.jsway.property.EditableProperty;
 import tw.funymph.jsway.property.EditablePropertyEvent;
@@ -28,7 +29,7 @@ import tw.funymph.jsway.property.EditablePropertyListener;
  * @version 1.2
  * @since 1.0
  */
-public class ChoicesPropertyEditor extends JComboBox implements EditablePropertyListener, PropertyEditor {
+public class ChoicesPropertyEditor extends JComboBox<Choice> implements EditablePropertyListener, PropertyEditor {
 
 	private static final long serialVersionUID = 3265409668248168701L;
 
