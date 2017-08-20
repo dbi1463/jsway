@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="JavaSway">
+	<property name="target" value="1.6" />
+	<property name="source" value="1.6" />
+	<path id="JavaSway.classpath">
+		<pathelement location="bin" />
+	</path>
+	<target name="init">
+		<mkdir dir="bin" />
+		<copy todir="bin/icons">
+			<fileset dir="src/icons" />
+		</copy>
+	</target>
+	<target name="clean">
+		<delete dir="bin" />
+		<delete dir="doc/api/*" />
+	</target>
+	<target name="build" depends="clean, build-project, pack-jar, demo" />
+	<target name="release" depends="build, java-doc" />
+	<target name="publish" depends="build,java-doc" />
+	<target name="java-doc">
+		<javadoc sourcepath="src/" destdir="doc/api/">
+			<excludepackage name="tw.jsway.examples" />
+			<excludepackage name="tw.jsway.dataview" />
+		</javadoc>
+	</target>
+	<target name="build-project" depends="init">
+		<javac destdir="bin" source="${source}" target="${target}" includeantruntime="false">
+			<src path="src" />
+			<src path="examples" />
+			<classpath refid="JavaSway.classpath" />
+			<exclude name="tw/jsway/dataview/*.*" />
+			<exclude name="tw/jsway/property/FileProperty.java" />
+		</javac>
+	</target>
+	<target name="pack-jar">
+		<jar destfile="jsway.jar" basedir="bin">
+			<exclude name="tw/jsway/examples/**" />
+		</jar>
+	</target>
+	<target name="demo">
+		<jar destfile="jsway-demo.jar" basedir="bin">
+			<manifest>
+				<attribute name="Main-Class" value="tw.jsway.examples.SwayDemoFrame"/>
+			</manifest>
+		</jar>
+	</target>
+</project>
