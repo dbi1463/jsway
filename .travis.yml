@@ -27,8 +27,8 @@ deploy:
   on:
     tags: true
 
-after_deploy:
-  - mvn -s settings.xml deploy site -Dmaven.test.skip=true -pl core
+#after_deploy:
+#  - mvn -s settings.xml deploy site -Dmaven.test.skip=true -pl core
 
 env:
   global:
