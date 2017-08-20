@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>tw.funymph</groupId>
 	<artifactId>jsway</artifactId>
-	<version>1.2-SNAPSHOT</version>
+	<version>1.2</version>
 	<name>Java Sway</name>
 	<packaging>pom</packaging>
 	<description>A set of widgets for Java Swing</description>
