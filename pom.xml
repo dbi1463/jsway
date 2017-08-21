@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>tw.funymph</groupId>
 	<artifactId>jsway</artifactId>
-	<version>1.2</version>
+	<version>1.2-Alpha</version>
 	<name>Java Sway</name>
 	<packaging>pom</packaging>
 	<description>A set of widgets for Java Swing</description>
@@ -15,4 +15,38 @@
 		<module>core</module>
 		<module>example</module>
 	</modules>
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
+	</licenses>
+	<scm>
+		<connection>scm:git:https://github.com/dbi1463/jsway.git</connection>
+		<developerConnection>scm:git:https://github.com/dbi1463/jsway.git</developerConnection>
+		<url>https://github.com/dbi1463/jsway</url>
+		<tag>jsway-${project.version}</tag>
+	</scm>
+	<issueManagement>
+		<system>Github Issue Tracking</system>
+		<url>https://github.com/dbi1463/jsway/issues</url>
+	</issueManagement>
+	<distributionManagement>
+		<repository>
+			<id>bintray-dbi1463-maven</id>
+			<name>dbi1463-maven</name>
+			<url>https://api.bintray.com/maven/dbi1463/maven/jsway/;publish=1</url>
+		</repository>
+		<snapshotRepository>
+			<id>bintray-dbi1463-maven</id>
+			<name>dbi1463-maven</name>
+			<url>https://api.bintray.com/maven/dbi1463/maven/jsway/;publish=0</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<developers>
+		<developer>
+			<name>Pin-Ying Tu</name>
+			<email>dbi1463@gmail.com</email>
+		</developer>
+	</developers>
 </project>
