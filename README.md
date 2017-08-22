@@ -18,6 +18,10 @@ Java Sway provides a set of widgets can be used in Java Swing applications:
 - Color icon
 - Number editor with unit
 
+Run the `SwayDemoFrame.java` in the `example` folder to see how to use the widgets
+
+![Java Sway Demo](https://raw.githubusercontent.com/dbi1463/jsway/master/doc/jsway_demo.png)
+
 ## Donwload
 Download [the latest JAR](https://github.com/dbi1463/jsway/releases/latest) or grab via Maven (available on JCenter):
 
